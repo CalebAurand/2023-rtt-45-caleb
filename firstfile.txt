@@ -1,2 +1,4 @@
-this is my first sourcetree github commit text file
+this is my first sourcetree github commit text file (edited)
 for TEKsystems Java Bootcamp
+
+adding another line to the file for 2nd commit
