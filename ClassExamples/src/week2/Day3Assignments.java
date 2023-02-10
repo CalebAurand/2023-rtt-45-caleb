@@ -1,6 +1,7 @@
 package week2;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
 
@@ -99,6 +100,7 @@ public class Day3Assignments {
 		String[] strArr = {"red", "green", "blue", "yellow"};
 		System.out.println(strArr.length);
 		String[] arrCopy = strArr.clone();
+		System.out.println(Arrays.toString(arrCopy));
 		for(String el : arrCopy) {
 			System.out.println(el);
 		}
@@ -237,8 +239,8 @@ public class Day3Assignments {
 		String[] list = new String[num];
 		for(int i = 0; i < num; i++) {
 			System.out.println("Enter your thing: ");
-			System.out.println(">>");
-			String input = scan.nextLine();
+			System.out.print(">> : ");
+			String input = scan.next();
 			list[i] = input;
 		}
 		for(String el : list) {
@@ -254,14 +256,14 @@ public class Day3Assignments {
 //		go.multiTable();
 //		go.findDouble();
 //		go.grtComDenom(35, 77);
-		System.out.println(go.retMid());
-		go.copyArr();
+//		System.out.println(go.retMid());
+//		go.copyArr();
 //		go.throwException();
-		go.loopArrar();
-		go.loopArray2();
-		go.swapArr();
-		go.sortArray();
-		go.listing();
+//		go.loopArrar();
+//		go.loopArray2();
+//		go.swapArr();
+//		go.sortArray();
+//		go.listing();
 		go.userArray();
 	}
 
