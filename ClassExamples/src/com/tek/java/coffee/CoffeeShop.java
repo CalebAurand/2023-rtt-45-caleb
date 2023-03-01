@@ -2,6 +2,7 @@ package com.tek.java.coffee;
 
 import java.text.DecimalFormat;
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 import java.util.Scanner;
 
@@ -54,6 +55,30 @@ public class CoffeeShop {
 		
 		//same as above but we are doing it in 1 line of code
 		menuItems.add(new MenuItem("Egg Sandwich", 14.30, 30));
+		
+		
+		Comparator<MenuItem> menuCompare = new Comparator<MenuItem>() { // this is an anonymous block that creates a new comparator
+			
+			@Override // we can not instantiate an interface so we must provide the implementation for that interface
+			public int compare(MenuItem o1, MenuItem o2) { // implementing the interface compare method
+				Double p1 = o1.getPrice(); // these lines are implementing the sorting logic
+				Double p2 = o2.getPrice();
+		
+			return p1.compareTo(p2);
+			} // this is the closing bracket for the compare method
+		}
+		
+		
+		//implementing the comparator as an anonymous block function
+		menuItems.sort( //this is the sort function being called on the menuItems list itself
+				 // this is the closing bracket for the comparator implementation
+				); // this is the closing parenthesis for the .sort method
+		
+		//single line of code that uses a java stream to sort by price
+		//notice the :: notation in the syntax
+		//the elements in the list are of type MenuItem and we are sorting by the getPrice method / field
+		//How to find this is to google for "Java stream sort object by field"
+		menuItems.sort(Comparator.comparing(MenuItem::getPrice));
 	}
 	
 	public void printMenuItems() {

@@ -253,7 +253,7 @@ public class Day3Assignments {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		Day3Assignments go = new Day3Assignments();
-//		go.multiTable();
+		go.multiTable();
 //		go.findDouble();
 //		go.grtComDenom(35, 77);
 //		System.out.println(go.retMid());
