@@ -85,3 +85,21 @@
 > you can ROLLBACK, this means undo all the changes you made using INSERT, UPDATE, or DELETE
 > IN a transaction you can do mult. inserts, updates, or deletes and then ROLLBACK >>> delete all those changes or
 > COMMIT>> commit all the changes to the database
+
+
+*JDBC*
+# what does JDBC stand for
+> Java Database Connectivity
+> allows us to connect to the database with java
+
+*Applying OOP to JDBC*
+# DAO - Data Access Object Interfaces 
+  - This interface defines the standard operations to be performed on model object(s). The interfaces provide a flexible design.
+# DAO - Data Access Object classes(Business/Controller layer) 
+  - This class implements above the interface. This class is responsible for getting data from a data source, which can be database / xml or any other storage mechanism. The interface implementation is a concrete implementation of the persistence logic.
+# DAL - Data-Access Layer 
+  - This is a layer in an application that provides easy and simplified access to data stored in persistent storage, such as an entity-relational database or any database. This layer exists between the Business/Controller Logic Layer (BLL) and the storage layer. 
+# Models Class / DTO 
+  - This object is simple POJO class containing getter and setter methods to store data retrieved using DAO class. 
+# DataSource 
+  - A data source could be a database such as an RDBMS, File,, XML repository, flat file system, or any other data source. A data source can also be another system service or some kind of repository.

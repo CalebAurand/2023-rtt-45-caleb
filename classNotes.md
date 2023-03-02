@@ -499,12 +499,38 @@ https://docs.google.com/presentation/d/1UrzL5sjGlmIjMSolaoi30WnM8Bc0Yy7aaiZ8978a
 > Maven is a library or packaage manager for java
 # Central Repository
   > mvnrepository.com/artifact
+
+Google search (package name) maven central
+go to mvnrepositorycentral
+click on libary
+click on version
+copy dependency tag code, paste into pom.xml file
+POM => Project Object Model
+
 *Maven Build LifeCycle/Commands*
   # Maven clean
   # Maven compile
   # Maven package
   # Maven deploy
 
+SQL UPDATE STATEMENT USING JAVA SYNTAX
+  public static void getUser(int id) throws SQLException{
+    String sql = "SELECT * FROM users WHERE id = ?";
+    PreparedStatement ps = conn.prepareStatement(sql);
+    ps.setInt(1, id);
+  }
 
+# public void setInt(int paramIndex, int value)
+  > Sets the integer value to the given parameter index.
+# public void setString(int paramIndex, String value)
+  > Sets the String value to the given parameter index.
+# public void setFloat(int paramIndex, float value)
+  > Sets the float value to the given parameter index.
+# public void setDouble(int paramIndex, double value)
+  > Sets the double value to the given parameter index.
+# public int executeUpdate()
+  > The executeUpdate(String SQL) method is most often used to execute DML statements (INSERT, UPDATE, and DELETE), and it returns an int value, representing the count of the rows aﬀected by its execution. 
+# public ResultSet executeQuery()
+  > The executeQuery(String SQL) method is used to retrieve data from the database by executing a DQL(SELECT ) statement and it returns a ResultSet Object containing data requested by executed SQL statement.
 
 
