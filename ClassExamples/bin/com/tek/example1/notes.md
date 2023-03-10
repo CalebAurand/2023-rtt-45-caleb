@@ -121,3 +121,21 @@ email from lauren clark
 links to peoplesoft and clarizen
 
 send rachel my PNC email 
+
+*Case Studies*
+between 80-100 hours of work
+has to have four database tables
+has to be something that is reasonable to do in the timeframe
+>ex's online stores, classes, pantry list, mechanic shop, schedulers, appointment booking, social media clone, meetup, forum, blog, comment thread, recipe book, bycicle rental, pet vaccine tracker
+
+# no external API's
+# has to have 6 pages (login doesn't count as a page)
+# each page has to do something
+  > create user page
+  > 5 more pages
+  >> search page would be good idea >> products with pix and blurb
+  >> product details page >> 1 picture, add to cart button
+  >> shopping cart page >> list of products in cart, delete button checkout button(or email list button)
+  >> checkout page >> save address, user info etc
+  >> admin only page >> add, edit, delete products from store
+  >>>> user profile page (optional)

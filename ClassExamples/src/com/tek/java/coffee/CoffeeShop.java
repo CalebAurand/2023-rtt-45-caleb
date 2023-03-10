@@ -70,9 +70,9 @@ public class CoffeeShop {
 		
 		
 		//implementing the comparator as an anonymous block function
-		menuItems.sort( //this is the sort function being called on the menuItems list itself
+//		menuItems.sort(); //this is the sort function being called on the menuItems list itself
 				 // this is the closing bracket for the comparator implementation
-				); // this is the closing parenthesis for the .sort method
+				 // this is the closing parenthesis for the .sort method
 		
 		//single line of code that uses a java stream to sort by price
 		//notice the :: notation in the syntax

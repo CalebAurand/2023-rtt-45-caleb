@@ -534,3 +534,53 @@ SQL UPDATE STATEMENT USING JAVA SYNTAX
   > The executeQuery(String SQL) method is used to retrieve data from the database by executing a DQL(SELECT ) statement and it returns a ResultSet Object containing data requested by executed SQL statement.
 
 
+*ORM* Object Relational Mapping
+  *Hibernate* 
+  The tool to use ORM, to hydrate objects with data from the datbase, 20 years old it has its pros and cons
+  # Entity - object that represents data in the database
+  *JPA* Java Persistence API
+  - JPA is the specification
+  - Hibernate is the implementation of that specification
+  *KBA Question*
+  - Goal is to make database agnostic, meaning it won't matter which database flavor the object is trying to communicate with, once the configurtion file is set up correctly
+
+SessionFactory factory=cfg.build
+
+# Hibernate Annotations - Slides 22-24
+ Annotation
+Description
+# @Entity
+This annotation indicates that the class is mapped to a database table. By default, the ORM framework understands that the class name is the same as the table name. The @Entity annotation must be placed before the class definition.
+# @Table
+This annotation is used if the class name is different than the database table name, and it must be placed before the class definition.
+# @Id
+This annotation specifies that a field is mapped to a primary key column in the table.
+# @Basic
+This annotation tells JPA the below variable is a regular attribute.
+# @Column
+This annotation is used to map an instance field of the class to a column in the database table, and it is placed before the getter method of the field. By default, Hibernate can implicitly infer the mapping based on field name and field type of the class, but if the field name and the corresponding column name are different, we have to use this annotation explicitly:
+
+- @Column(name = "ACC_NO", unique = false, nullable = false, length = 100)
+private String accountNumber;
+
+
+# @JoinColumn
+This annotation is used to map the foreign key column of a managed association (e.g., one-to-one, many-to-one, many-to-many).
+# @TableGenerator
+This annotation is used to specify the value generator for the property specified in @GeneratedValue annotation. It creates a table for value generation.
+# @ColumnResult
+This annotation references the name of a column in the SQL query using the select clause.
+# @GeneratedValue
+If the values of the primary column are auto-increment, we need to use this annotation along with one of the following strategy types: AUTO, IDENTITY, SEQUENCE, and TABLE. In our case, we use the strategy IDENTITY, which specifies that the generated values are unique at table level, whereas the strategy AUTO implies that the generated values are unique at database level.
+
+# Hibernate Configuration Property
+- create: If the value is created, Hibernate creates a new table in the database when the SessionFactory object is created. If a table exists in the database with the same name, it deletes the table, along with the data and creates a new table.
+- update: If the value is updated, Hibernate first validates whether the table is present in the database or not. If it is present, Hibernate alters that table per the changes; if it is not present, Hibernate creates a new one.
+- validate: If the value is validated, Hibernate only verifies whether the table is present. If the table does not exist, Hibernate throws an exception.
+- create-drop: If the value is create-drop, Hibernate creates a new table when SessionFactory is created, performs the operation, and deletes the table when SessionFactory is destroyed. This value is used for testing the Hibernate code.
+- none: It does not make any changes to the schema.
+
+Example: <property name=”hibernate.hbm2ddl.auto”>create</property>
+
+# Specific Database Dialect (would be different for Postgres, etc)
+<property name="dialect">org.hibernate.dialect.MySQL5Dialect</property>

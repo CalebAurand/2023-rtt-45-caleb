@@ -29,14 +29,11 @@
 # what is best practice for primary key
 > int(numeric), not null, auto-increment, unique
 
-# subquery using not in
-> 
-
 # what is the default order by ordering(sorting)
 > ascending
 > understand double negatives to answer this question properly
 
-# understand the joins we've been doing form the beginning is 
+# understand the joins we've been doing from the beginning is 
 > inner join
 
 # why do we use database constraints
@@ -103,3 +100,14 @@
   - This object is simple POJO class containing getter and setter methods to store data retrieved using DAO class. 
 # DataSource 
   - A data source could be a database such as an RDBMS, File,, XML repository, flat file system, or any other data source. A data source can also be another system service or some kind of repository.
+
+
+
+
+  *JPA* Java Persistence API
+  - JPA is the specification
+  - Hibernate is the implementation of that specification
+  *KBA Question*
+
+  **JUNIT KBA**
+  @BeforeAll - has to be a *static method*, public static method, or it wont run
