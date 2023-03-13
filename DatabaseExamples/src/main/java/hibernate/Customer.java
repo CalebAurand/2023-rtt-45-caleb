@@ -15,13 +15,18 @@ import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
+import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 
 @Entity
 @Getter
 @Setter
+@ToString
+@AllArgsConstructor
+@NoArgsConstructor
 @Table(name = "customers")
 public class Customer {
 
@@ -88,15 +93,5 @@ public class Customer {
 	@ToString.Exclude
 	@OneToMany(mappedBy = "customer", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
 	private List<Order> orders = new ArrayList<Order>();
-
-
-	@Override
-	public String toString() {
-		return "Customer [id=" + id + ", customerName=" + customerName + ", contactLastName=" + contactLastName
-				+ ", contactFirstName=" + contactFirstName + ", phone=" + phone + ", addressLine1=" + addressLine1
-				+ ", addressLine2=" + addressLine2 + ", city=" + city + ", state=" + state + ", postalCode="
-				+ postalCode + ", country=" + country + ", salesRepEmployeeNumber=" + salesRepEmployeeNumber
-				+ ", creditLimit=" + creditLimit + "]";
-	}
 
 }
